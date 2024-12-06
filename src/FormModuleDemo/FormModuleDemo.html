@@ -1,6 +1,17 @@
 
 <div>
-    Name : <input type="text" [(ngModel)]="Name" />
-
-    <p>{{}}</p>
+    <p>Name : <input type="text" [(ngModel)]="Name" />{{Name}}</p>
+    <p>Job Title : (Static select tag)
+        <select [(ngModel)]="Id">
+            <option value="1">Manager</option>
+            <option value="2">Programmer</option>
+        </select>
+    </p>  
+    <p>Job Title : (Dynamic select tag)
+        <select [(ngModel)]="Id">
+            <option *ngFor="let jt of JobTitles" [value]="jt.value">{{ jt.label }}</option>
+        </select> 
+    </p>
+    
+    <p></p>
 </div>
