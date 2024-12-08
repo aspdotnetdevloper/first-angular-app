@@ -1,17 +1,24 @@
-
-<div>
-    <p>Name : <input type="text" [(ngModel)]="Name" />{{Name}}</p>
-    <p>Job Title : (Static select tag)
-        <select [(ngModel)]="Id">
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="name" class="control-label col-sm-2">Name : {{Name}}</label>
+        <div class="col-sm-6"><input name="name" type="text" required minlength="4" [(ngModel)]="Name" class="form-control" /></div>
+    </div>
+    <div class="form-group">
+        <label for="JobTitles" class="control-label col-sm-4">Job Title : (Static select tag) </label>
+        <select name="JobTitles" class="form-control" [(ngModel)]="Id">
             <option value="1">Manager</option>
             <option value="2">Programmer</option>
         </select>
-    </p>  
-    <p>Job Title : (Dynamic select tag)
-        <select [(ngModel)]="Id">
+    </div>  
+    <div class="form-group">
+        <label for="JobTitles2" class="control-label col-sm-4">Job Title : (Dynamic select tag)</label>
+        <select name="JobTitles2" [(ngModel)]="Id" class="form-control">
             <option *ngFor="let jt of JobTitles" [value]="jt.value">{{ jt.label }}</option>
         </select> 
-    </p>
-    
-    <p></p>
-</div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+</form>
