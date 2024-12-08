@@ -16,6 +16,14 @@ export class FormModuleDemoComponent{
         { value: 4, label : 'Director'},
     ];
     Name ='harsh';
+    EmailAddress ='';
+    Telephone ='';
     Id =2;
-    
+
+        // in your component
+    onSubmit(formValue: any) {
+        console.log(formValue);
+        alert(formValue);
+        // submit form logic here
+    }
 }
