@@ -22,7 +22,6 @@ export class JobTitleService implements JobTitleInterface {
     // Implement the print method
     public getJobTitles(): Observable<DropDownModel[]> {
       // get http request
-      console.log("harsh test")
       return this.httpRequest.get<DropDownModel[]>(this.apiUrl);
     }
   }
