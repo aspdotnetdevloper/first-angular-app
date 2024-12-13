@@ -12,13 +12,18 @@ import { Observable } from "rxjs";
 export class JobTitleService implements JobTitleInterface {
     private httpRequest: HttpClient;
     private apiUrl = 'http://localhost:5162/JobTitles';
+    
   
     constructor(private http: HttpClient) {
       this.httpRequest = http;
     }
   
     public getJobTitles(): Observable<DropDownModel[]> {
+      const params = {
+        param1: 'CEO',
+        param2: 'HR'
+      };
       // get http request
-      return this.httpRequest.get<DropDownModel[]>(this.apiUrl);
+      return this.httpRequest.get<DropDownModel[]>(this.apiUrl, { params });
     }
   }
