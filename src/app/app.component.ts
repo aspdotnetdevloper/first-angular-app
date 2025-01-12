@@ -5,7 +5,7 @@ import {RouterOutlet , RouterLink} from '@angular/router';
 
 @Component({
   selector:'app-root',
-  template: '<nav><a routerLink="/">Home</a>| <a routerLink="formmoduledemo">Forms Module Demo</a>| <a routerLink="outputdemo">Output & EventEmitter Demo</a>| <a routerLink="pipedemo">Pipe Demo</a> | <a routerLink="/user">User</a> | <a routerLink="/injectmethod">Inject Method</a> | <a routerLink="/constructormethod">Constructor Method</a></nav> <router-outlet />',
+  template: '| <a routerLink="/LifeCycleDemo">Component Life Hooks Demo</a> |<nav><a routerLink="/">Home</a>| <a routerLink="formmoduledemo">Forms Module Demo</a>| <a routerLink="outputdemo">Output & EventEmitter Demo</a>| <a routerLink="pipedemo">Pipe Demo</a> | <a routerLink="/user">User</a> | <a routerLink="/injectmethod">Inject Method</a> | <a routerLink="/constructormethod">Constructor Method</a>  </nav><router-outlet />',
   imports: [RouterOutlet,RouterLink],
   styles:':host{color : #a144eb}',
   

@@ -6,8 +6,14 @@ import { Car2Component } from './InjectableDemo/car2.component';
 import { PipeDemoComponent } from './PipeDemo/PipeDemo.component';
 import { ParentOutputComponent } from '../OutputDemo/parent.component';
 import { FormModuleDemoComponent } from '../FormModuleDemo/FormModuleDemo.component';
+import { LifeHooksComponent } from '../Component/LifeHooks.component';
 
 export const routes: Routes = [
+  {
+    path: 'LifeCycleDemo',
+    title: 'ComponentLife Hooks demo',
+    component: LifeHooksComponent,
+  },
       {
         path: '',
         title: 'App Home Page',
@@ -48,4 +54,5 @@ export const routes: Routes = [
         title: 'Output demo',
         component: FormModuleDemoComponent,
       },
+      
 ];
